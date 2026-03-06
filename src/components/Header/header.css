@@ -1,0 +1,39 @@
+/* -------------------------------------- */
+/*  Header Layout                         */
+/* -------------------------------------- */
+
+header {
+    height: 15vh;
+    margin: var(--space-12) 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* -------------------------------------- */
+/*  Welcome Message                       */
+/* -------------------------------------- */
+
+.welcome-message h1 {
+    min-width: 50%;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    letter-spacing: 2px;
+}
+
+.welcome-message .secondary {
+    color: var(--secondary-color);
+}
+
+/* -------------------------------------- */
+/*  Navbar Layout                         */
+/* -------------------------------------- */
+
+.nav-list {
+    max-width: 50%;
+    display: flex;
+    gap: var(--space-12);
+    margin-right: var(--space-16);
+    align-items: center;
+}

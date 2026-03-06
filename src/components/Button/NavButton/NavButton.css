@@ -1,0 +1,183 @@
+/* ----------------------------- */
+/*  Control Variables */
+/* ----------------------------- */
+.nav-button {
+    --anchor-color: var(--text-color);
+    --anchor-background-color: var(--primary-color);
+    --secondary-color: #07c2f7;
+    
+    --anchor-transition-time: 0.4s;
+    --anchor-transition-delay: 0.4s;
+    --anchor-hover-color: var(--secondary-color);
+
+    --line-size: 1.5px;
+    --line-color: var(--anchor-hover-color);
+
+    --transition-time-laterals: 0.3s;
+    --transition-delay-laterals: 0.2s;
+    --transition-time-bottom-left: var(--anchor-transition-time);
+    --transition-delay-bottom-left: var(--anchor-transition-delay);
+    --transition-time-bottom-right: var(--anchor-transition-time);
+    --transition-delay-bottom-right: var(--anchor-transition-delay);
+    --transition-time-top-left: 0.3s;
+    --transition-delay-top-left: 0.3s;
+    --transition-time-top-right: 0.3s;
+    --transition-delay-top-right: 0.3s;
+
+    --anchor-padding-topbotton: 5px;
+    --anchor-padding-leftright: 15px;
+    --anchor-padding: var(--anchor-padding-topbotton) var(--anchor-padding-leftright);
+    --anchor-font-size: var(--font-size-sm);
+    --anchor-letter-spacing: .1em;
+    --anchor-hover-letter-spacing: var(--anchor-letter-spacing);
+
+    --anchor-font-family: var(--font-family-heading);
+    --anchor-font-weight: var(--font-weight-bold);
+}
+
+/* ----------------------------- */
+/*  Button construction */
+/* ----------------------------- */
+
+.nav-button {
+    position: relative;
+    display: inline-block;
+    color: var(--anchor-color);
+    font-family: var(--anchor-font-family);
+    font-size: var(--anchor-font-size);
+    font-weight: var(--anchor-font-weight);
+    letter-spacing: var(--anchor-letter-spacing);
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--anchor-background-color);
+    padding: var(--anchor-padding);
+    transition: var(--anchor-transition-time);
+    transition-delay: var(--anchor-transition-delay);
+}
+
+.nav-button:hover {
+    color: var(--anchor-hover-color);
+    letter-spacing: var(--anchor-hover-letter-spacing);
+    text-shadow: 0 0 5px var(--anchor-hover-color);
+    transition-delay: 1ms;
+}
+
+.nav-button span {
+    position: absolute;
+    display: block;
+    background: var(--line-color);
+    box-shadow: 0 0 5px var(--line-color);
+}
+
+/* ----------------------------- */
+/*  Top left line  */
+/* ----------------------------- */
+.nav-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 50.5%;
+    height: var(--line-size);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform var(--transition-time-top-left);
+}
+
+.nav-button:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+/* ----------------------------- */
+/*  Top right line  */
+/* ----------------------------- */
+
+.nav-button span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: var(--line-size);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform var(--transition-time-top-right);
+}
+
+.nav-button:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ----------------------------- */
+/*  Right Lateral line  */
+/* ----------------------------- */
+.nav-button span:nth-child(3) {
+    height: 100%;
+    width: var(--line-size);
+    top: 0;
+    right: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform var(--transition-time-laterals);
+    transition-delay: var(--transition-delay-laterals);
+}
+
+.nav-button:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+/* ----------------------------- */
+/*  Left lateral line  */
+/* ----------------------------- */
+.nav-button span:nth-child(4) {
+    height: 100%;
+    width: var(--line-size);
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform var(--transition-time-laterals);
+    transition-delay: var(--transition-delay-laterals);
+}
+
+.nav-button:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+/* ----------------------------- */
+/*  Bottom left line  */
+/* ----------------------------- */
+.nav-button span:nth-child(5) {
+    height: var(--line-size);
+    width: 50.5%;
+    bottom: 0;
+    left: 0%;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform var(--transition-time-bottom-left);
+    transition-delay: var(--transition-delay-bottom-left);
+}
+
+.nav-button:hover span:nth-child(5) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ----------------------------- */
+/*  Bottom right line  */
+/* ----------------------------- */
+.nav-button span:nth-child(6) {
+    height: var(--line-size);
+    width: 50.5%;
+    bottom: 0;
+    right: 0%;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform var(--transition-time-bottom-right);
+    transition-delay: var(--transition-delay-bottom-right);
+}
+
+.nav-button:hover span:nth-child(6) {
+    transform: scaleX(1);
+    transform-origin: right;
+}

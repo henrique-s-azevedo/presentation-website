@@ -1,0 +1,114 @@
+/* ----------------------------- */
+/*  CSS DEFAULTS RESET  */
+/* ----------------------------- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ----------------------------- */
+/*  CSS VARIABLES  */
+/* ----------------------------- */
+:root {
+    /* Colors */
+    --primary-color: #001c34;
+    --secondary-color: #07c2f7;
+    --background-secondary-color: #f1f8ff;
+    --background-image-color: #12b9eb;
+    --text-color: #f1f8ff;
+    --font-family: 'Poppins', sans-serif;
+
+    /* Typography */
+    --font-family-base: 'Poppins', sans-serif;
+    --font-family-heading: 'Poppins', sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 3rem;
+
+    --line-height-base: 1.5;
+    --line-height-heading: 1.2;
+
+    /* Spacing */
+    --space-4: 0.25rem;
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+}
+
+/* ----------------------------- */
+/*  GLOBAL CSS  */
+/* ----------------------------- */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
