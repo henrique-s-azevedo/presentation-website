@@ -1,8 +1,8 @@
 import "./NavButton.css";
 
-export default function NavButton({ href, children }) {
+export default function NavButton({ children }) {
   return (
-    <a className="nav-button" href={href}>
+    <div className="nav-button">
       {children}
       <span></span>
       <span></span>
@@ -10,6 +10,6 @@ export default function NavButton({ href, children }) {
       <span></span>
       <span></span>
       <span></span>
-    </a>
+    </div>
   );
 }
