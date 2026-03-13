@@ -22,7 +22,7 @@ export default function HomeTopPage() {
     <div className="home-top-page" onWheel={handleScroll}>
       <TransitionColumns trigger={trigger} />
 
-      <div className="hero">
+      <div className="hero-top">
         <h1>THIS IS PAGE 1</h1>
         <p>Scroll para continuar</p>
       </div>

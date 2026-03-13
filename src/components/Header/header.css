@@ -3,8 +3,8 @@
 /* -------------------------------------- */
 
 header {
-    height: 15vh;
-    margin: var(--space-12) 2vw;
+    height: var(--header-size-fs);
+    margin: 0 2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;

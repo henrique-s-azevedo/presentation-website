@@ -17,7 +17,7 @@
 
 .col {
   flex: 1;
-  background-color: #746df8;
+  background-color: var( --background-secondary-color);
   transform-origin: bottom;
   transform: scaleY(0);
   visibility: hidden;

@@ -15,7 +15,6 @@ export default function GenericBottomPage({ children }) {
       <div id="generic-bottom-content" className="generic-bottom-content">
         {children}
       </div>
-
       <Footer />
     </section>
   );

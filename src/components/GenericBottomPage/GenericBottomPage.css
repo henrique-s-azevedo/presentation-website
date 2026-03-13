@@ -1,14 +1,15 @@
 .generic-bottom-page {
-  min-height: 100vh;
-  padding: 60px 40px;
-  background: #1a1a1a;
-  color: white;
+  min-height: calc(100dvh - var(--header-size-fs));;
+  background: var(--background-secondary-color);
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .generic-bottom-content {
+  flex: 1;
+  padding: 60px 40px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;

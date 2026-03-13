@@ -1,7 +1,8 @@
 .generic-top-page {
-  height: 100vh;
+  height: calc(100dvh - var(--header-size-fs));
   width: 100%;
   padding-top: var(--header-height, 80px);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;

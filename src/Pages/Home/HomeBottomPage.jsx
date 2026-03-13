@@ -27,7 +27,7 @@ export default function HomeBottomPage() {
     <div className="home-bottom-page">
       <TransitionColumns trigger={trigger} />
 
-      <div className="hero" id="content">
+      <div className="hero-bottom" id="content">
         <h1>THIS IS PAGE 2</h1>
         <button onClick={handleClick}>Voltar à Página 1</button>
       </div>

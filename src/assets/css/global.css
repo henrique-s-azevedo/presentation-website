@@ -90,11 +90,25 @@ button {
     --space-16: 1rem;
     --space-24: 1.5rem;
     --space-32: 2rem;
+
+    /* Sizes */
+    --header-size-fs: 15vh;
+    --footer-size-fs: 10vh;
 }
 
 /* ----------------------------- */
 /*  GLOBAL CSS  */
 /* ----------------------------- */
+* {
+  -ms-overflow-style: none; /* IE/Edge antigo */
+  scrollbar-width: none;    /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari */
+}
+
+
 html, body {
   height: 100%;
 }
@@ -107,8 +121,4 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-}
-
-main {
-  flex: 1;
 }
