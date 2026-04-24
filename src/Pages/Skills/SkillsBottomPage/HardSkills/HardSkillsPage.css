@@ -1,0 +1,158 @@
+/* Main section container */
+.hard-section {
+  min-height: 100vh;
+  padding: 6rem 9% 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-secondary-color);
+}
+
+/* Page heading */
+.hard-heading {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-32);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Layout container */
+.hard-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Content column with max width constraint */
+.hard-column {
+  width: 100%;
+  max-width: 630px;
+}
+
+/* Intro paragraph styling */
+.hard-intro {
+  text-align: justify;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: black;
+}
+
+/* ============================================
+   TIMELINE DOTS + CARDS
+=============================================== */
+
+/* Timeline container with left border */
+.hardskills-box {
+  position: relative;
+  border-left: 0.2rem solid var(--primary-color);
+  padding-left: 1rem;
+  margin-top: var(--space-32);
+}
+
+/* Timeline content wrapper */
+.hardskills-content {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: var(--space-24);
+}
+
+/* Timeline dot indicator */
+.hardskills-content::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  width: var(--space-16);
+  height: var(--space-16);
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* ============================================
+   HARD SKILL CARDS
+=============================================== */
+
+/* Card container */
+.hard-card {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* Header section */
+.hard-card-header {
+  position: relative;
+  background: var(--primary-color);
+  padding: 1rem 1.2rem;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Card title text styling */
+.hard-card-header h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Toggle button more/hide */
+.hard-card-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  background: var(--ternary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+/* Show button on hover when card is closed */
+.hard-card:not(.open):hover .hard-card-more {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Always visible button when card is open */
+.hard-card.open .hard-card-more {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+/* Maintain button visibility on hover when card is already open */
+.hard-card.open:hover .hard-card-more {
+  opacity: 1;
+}
+
+/* Card content area */
+.hard-card-body {
+  background: var(--background-secondary-color);
+  padding: 1.4rem 1.6rem;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Navigation button - link to soft skills section */
+.to-soft-skills-button {
+  margin-top: var(--space-46);
+  margin-bottom: var(--space-12);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}

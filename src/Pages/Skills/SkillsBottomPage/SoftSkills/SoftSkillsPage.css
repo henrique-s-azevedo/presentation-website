@@ -1,0 +1,150 @@
+/* ============================================
+   SOFT SKILLS PAGE — BASE LAYOUT
+=============================================== */
+
+/* Main container for soft skills section */
+.softskills-section {
+  min-height: 100vh;
+  padding: 6rem 9% 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-secondary-color);
+}
+
+/* Section title */
+.softskills-section .heading {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-32);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.softskills-section .heading span {
+  color: var(--primary-color);
+}
+
+/* Flex container - centers content */
+.softskills-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Content column with max width */
+.softskills-column {
+  width: 100%;
+  max-width: 630px;
+}
+
+/* ============================================
+   INTRO TITLE (H3) + PARAGRAPHS
+=============================================== */
+
+/* Intro title styling */
+.softskills-column .title {
+  position: relative;
+  display: block;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-color);
+  margin-bottom: var(--space-24);
+}
+
+/* Intro paragraphs with enhanced readability */
+.softskills-column .title p {
+  margin-bottom: 18px;          /* spacing between paragraphs */
+  line-height: 1.6;             /* line height for readability */
+  text-align: justify;          /* align text */
+  color: black;
+}
+
+/* ============================================
+   TIMELINE + CARDS - Vertical timeline layout
+=============================================== */
+
+/* Timeline container with left border */
+.softskills-column .softskills-box {
+  position: relative;
+  border-left: 0.2rem solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+/* Timeline item - content wrapper */
+.softskills-box .softskills-content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Timeline dot indicator */
+.softskills-box .softskills-content::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: var(--space-16);
+  height: var(--space-16);
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* Individual skill card wrapper */
+.softskills-content .content {
+  position: relative;
+  margin-bottom: var(--space-16);
+  overflow: hidden;
+  background: var(--background-secondary-color);
+  transition: 0.4s ease;
+}
+
+/* ============================================
+   RESPONSIVE - Mobile and tablet adjustments
+=============================================== */
+
+@media (max-width: 768px) {
+  .softskills-section {
+    padding: 4rem 5% 2rem;
+  }
+
+  /* Hide timeline left border on mobile */
+  .softskills-column .softskills-box {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  /* Hide timeline dots on mobile */
+  .softskills-box .softskills-content::before {
+    display: none;
+  }
+
+  /* Center cards on mobile */
+  .softskills-content .content {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .softskills-box .softskills-content {
+    padding-left: 0;
+  }
+
+  /* Full width column */
+  .softskills-column {
+    max-width: 100%;
+  }
+
+  /* Intro paragraphs spacing on mobile */
+  .softskills-column .title p {
+    margin-bottom: 16px;
+    line-height: 1.55;
+  }
+}
+
+/* Navigation button - link to hard skills section */
+.to-hard-skills-button {
+  margin-top: var(--space-46);
+  margin-bottom: var(--space-12);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}

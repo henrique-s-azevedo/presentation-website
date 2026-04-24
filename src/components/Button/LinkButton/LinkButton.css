@@ -1,0 +1,33 @@
+.glow-button {
+  display: inline-block;
+  color: var(--text-color);
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.25s ease-in-out;
+}
+
+/* HOVER CLEAN */
+.glow-button:hover {
+  background: #f245a3; /* rosa */
+  color: var(--primary-color); /* texto volta ao primary */
+  letter-spacing: 0;
+}
+
+.glow-button {
+  display: inline-flex;          /* garante alinhamento horizontal */
+  align-items: center;           /* alinha verticalmente */
+  gap: 8px;                      /* espaço entre seta e texto */
+  overflow: visible;             /* garante que a seta não é cortada */
+}
+
+.arrow-left,
+.arrow-right {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+}

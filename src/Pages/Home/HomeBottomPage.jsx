@@ -1,35 +1,17 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import TransitionColumns from "../../components/TransitionColumns/TransitionColumns";
+import React from "react";
+import DesktopCarousel from "../../components/HomeCarousel/DesktopCarousel.jsx";
+import MobileCarousel from "../../components/HomeCarousel/MobileCarousel.jsx";
 import "./HomeBottomPage.css";
 
 export default function HomeBottomPage() {
-  const [trigger, setTrigger] = useState(false);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById("content").classList.add("show");
-    }, 300);
-  }, []);
-
-  const handleClick = () => {
-    if (trigger) return;
-
-    setTrigger(true);
-
-    setTimeout(() => {
-      navigate("/");
-    }, 1200);
-  };
-
   return (
     <div className="home-bottom-page">
-      <TransitionColumns trigger={trigger} />
+      <div className="desktop-only">
+        <DesktopCarousel />
+      </div>
 
-      <div className="hero-bottom" id="content">
-        <h1>THIS IS PAGE 2</h1>
-        <button onClick={handleClick}>Voltar à Página 1</button>
+      <div className="mobile-only">
+        <MobileCarousel />
       </div>
     </div>
   );

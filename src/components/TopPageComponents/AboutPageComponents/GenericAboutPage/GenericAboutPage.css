@@ -1,0 +1,84 @@
+/* ----------------------------- */
+/*   BASE SECTION LAYOUT         */
+/* ----------------------------- */
+
+.about-section {
+  min-height: 100vh;
+  padding: 6rem 9% 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-secondary-color);
+}
+
+/* Page title */
+.about-heading {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-32);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Content wrapper */
+.about-content {
+  width: 100%;
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+}
+
+.about-content p {
+  color: black;
+  text-align: justify;
+  margin-bottom: 8px;
+}
+
+/* ----------------------------- */
+/*   GENERIC NAVIGATION BUTTONS  */
+/* ----------------------------- */
+
+.about-navigation {
+  margin-top: var(--space-32);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 630px;
+}
+
+.about-nav-button {
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  background: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.about-nav-button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* ----------------------------- */
+/*   MOBILE                      */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 5% 2rem;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-navigation {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,134 @@
+.hard-skill-card {
+  width: 100%;
+  padding: var(--space-8) var(--space-16);
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--space-8);
+}
+
+/* ============================================
+   CLOSED STATE
+=============================================== */
+
+/* Closed card layout - icon and title */
+.hard-skill-card-closed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hard-skill-card-closed h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Icon and toggle button container */
+.hard-skill-icon-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.hard-skill-icon {
+  width: 100%;
+  height: 100%;
+  background: var(--ternary-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: opacity 0.25s ease;
+}
+
+/* Toggle button - shows on hover, covers icon */
+.hard-skill-card-more {
+  position: absolute;
+  inset: 0;
+  background: var(--ternary-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Icon visibility toggle - hide icon on hover, show button */
+.hard-skill-card:hover .hard-skill-icon {
+  opacity: 0;
+}
+
+.hard-skill-card:hover .hard-skill-card-more {
+  opacity: 1;
+}
+
+
+/* ============================================
+   OPEN STATE - Expanded display
+=============================================== */
+
+/* Opened card styling */
+.hard-skill-card.open {
+  background: rgba(4, 72, 131, 0.15);
+  color: black;
+  padding: 0;
+}
+
+.hard-skill-card-open {
+  padding: 0 0 var(--space-12) 0;
+}
+
+.hard-skill-section p {
+  margin: 0;
+  padding: 0 var(--space-12);
+  text-align: justify;
+  line-height: 1.55;
+  color: black;
+}
+
+/* Open text label - context indicator */
+.hard-skill-label {
+  width: 100%;
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+
+  background: linear-gradient(
+    to right,
+    var(--ternary-color) 0%,
+    rgba(242, 69, 163, 0.4) 40%,
+    rgba(242, 69, 163, 0.15) 70%,
+    rgba(242, 69, 163, 0) 100%
+  );
+
+  color: var(--primary-color);
+  margin-bottom: var(--space-12);
+}
+
+/* ============================================
+   RESPONSIVE Mobile
+=============================================== */
+
+/* Mobile card */
+@media (max-width: 768px) {
+  .hard-skill-card {
+    padding: 1rem;
+  }
+
+  .hard-skill-icon-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,174 @@
+/* ---------------------------------------- */
+/*   MAIN CONTAINER — SAME AS OTHER BOTTOMS */
+/* ---------------------------------------- */
+
+.generic-projects-bottom-page {
+  min-height: 100vh;
+  padding: 6rem 9% 2rem;
+  background: var(--background-secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------------------------------------- */
+/*   IMAGE SECTION                          */
+/* ---------------------------------------- */
+
+.project-image-wrapper {
+  width: 100%;
+  max-width: 630px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-32);
+}
+
+.project-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+/* ---------------------------------------- */
+/*   TITLE                                  */
+/* ---------------------------------------- */
+
+.project-title {
+  font-size: var(--font-size-2xl);
+  color: var(--primary-color);
+  margin-bottom: var(--space-24);
+  text-align: center;
+}
+
+/* ---------------------------------------- */
+/*   LINKS (BUTTONS)                        */
+/* ---------------------------------------- */
+
+.project-links {
+  display: flex;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.project-links a {
+  padding: 10px 20px;
+  border-radius: var(--space-12);
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.project-links a:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* ---------------------------------------- */
+/*   SECTION WRAPPER + TITLES (NEW)         */
+/* ---------------------------------------- */
+
+.project-section {
+  width: 100%;
+  max-width: 630px;
+  margin-bottom: var(--space-32);
+}
+
+.project-subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--primary-color);
+  margin-bottom: var(--space-12);
+}
+
+/* ---------------------------------------- */
+/*   TECHNOLOGIES                           */
+/* ---------------------------------------- */
+
+.project-technologies {
+  width: 100%;
+  max-width: 630px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--space-16);
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--font-size-md);
+}
+
+.tech-item svg {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+}
+
+/* ---------------------------------------- */
+/*   TEXT SECTIONS (DESCRIPTION + MOTIV.)   */
+/* ---------------------------------------- */
+
+.project-description,
+.project-motivation {
+  width: 100%;
+  max-width: 630px;
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: black;
+  text-align: justify;
+}
+
+/* ---------------------------------------- */
+/*   AUTHORS                                */
+/* ---------------------------------------- */
+
+.project-authors {
+  width: 100%;
+  max-width: 630px;
+  margin-bottom: var(--space-32);
+}
+
+.project-authors ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-authors li {
+  font-size: var(--font-size-md);
+  margin-bottom: 6px;
+  color: black;
+}
+
+.author-name {
+  font-weight: 700; /* bold */
+}
+
+.author-email {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* ---------------------------------------- */
+/*   MOBILE                                 */
+/* ---------------------------------------- */
+
+@media (max-width: 768px) {
+  .generic-projects-bottom-page {
+    padding: 4rem 5% 2rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-links a {
+    text-align: center;
+  }
+}

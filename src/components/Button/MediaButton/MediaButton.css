@@ -1,0 +1,50 @@
+.media-button svg {
+  margin: 0;
+  padding: 0;
+}
+
+.media-button {
+  font-size: var(--font-size-2xl);
+  color: var(--secondary-color);
+  position: relative;
+  transition: 0.3s ease;
+
+  width: 3rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+
+  border-radius: 50%;
+}
+
+/* Glow + fill hover sem aumentar tamanho */
+.media-button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 1rem var(--secondary-color);
+}
+
+/* Glow centrado atrás do ícone */
+.media-button::after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  background: var(--secondary-color);
+  opacity: 0;
+  filter: blur(8px);
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.media-button:hover::after {
+  opacity: 0.6;
+}

@@ -4,22 +4,36 @@
 
 header {
     height: var(--header-size-fs);
-    margin: 0 2vw;
+    padding: 0 2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    background-color: var(--primary-color);
 }
 
 /* -------------------------------------- */
 /*  Welcome Message                       */
 /* -------------------------------------- */
 
+.welcome-message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-16);
+}
+
 .welcome-message h1 {
-    min-width: 50%;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
     letter-spacing: 2px;
+    flex-shrink: 0;
+
+    padding-right: var(--space-16);
+    border-right: 2px solid var(--ternary-color);
 }
 
 .welcome-message .secondary {
@@ -27,13 +41,118 @@ header {
 }
 
 /* -------------------------------------- */
-/*  Navbar Layout                         */
+/*  Download CV Button                    */
 /* -------------------------------------- */
 
-.nav-list {
-    max-width: 50%;
+.resume-download {
     display: flex;
-    gap: var(--space-12);
-    margin-right: var(--space-16);
     align-items: center;
+    justify-content: center;
+
+    color: var(--text-color);
+    background-color: var(--ternary-color);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+
+    padding: var(--space-8) var(--space-16);
+    border-radius: var(--space-12);
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.resume-download:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* -------------------------------------- */
+/*  Navbar Desktop                        */
+/* -------------------------------------- */
+
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+/* -------------------------------------- */
+/*  Hamburger Button (Mobile)             */
+/* -------------------------------------- */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    transition: 0.3s ease;
+}
+
+/* Animação do X */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* -------------------------------------- */
+/*  Mobile Layout                         */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .resume-download {
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-bold);
+
+        padding: var(--space-4) var(--space-8);
+        border-radius: var(--space-12);
+    }
+    /* Mostrar hambúrguer */
+    .hamburger {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    /* Esconder navbar por defeito */
+    .nav {
+        position: absolute;
+        top: var(--header-size-fs);
+        right: 0;
+        width: 100%;
+        background: var(--primary-color);
+        padding: var(--space-16);
+
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Mostrar quando aberto */
+    .nav.open {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: var(--space-24);
+        align-items: flex-start;
+    }
 }

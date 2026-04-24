@@ -1,0 +1,174 @@
+/* ============================================
+   ABOUT MY STORY Layout
+=============================================== */
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+  margin: 0;
+}
+
+.about-row.left {
+  grid-template-columns: auto 1fr;
+}
+
+.two-rows {
+  grid-template-rows: auto auto;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+/* Image 1 (spans 2 rows by default) */
+.about-image-1 {
+  grid-row: span 2;
+  width: 100%;
+  max-width: 180px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.95;
+  transition: 0.25s ease;
+  translate: 0 -8px;
+}
+
+/* Image 2 */
+.about-image-2 {
+  width: 100%;
+  max-width: 180px;
+  opacity: 0.95;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+/* Text block next to image 1 */
+.about-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Force p1 next to image, p2 below */
+.about-text-block p:first-child {
+  grid-row: 1;
+}
+
+.about-text-block p:last-child {
+  grid-row: 2;
+}
+
+/* CV button wrapper */
+.cv-button-wrapper {
+  text-align: center;
+}
+
+.cv-button {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Bottom navigation buttons */
+.about-bottom-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* Double class to overide generic styles for this specific page */
+.about-bottom-buttons.about-my-story-bottom-buttons {
+  justify-content: flex-end;
+}
+
+/* Bullet list */
+.about-list {
+  color: black;
+  margin: var(--space-8) 0 var(--space-12) 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-list li {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+=============================================== */
+
+/* ----------- BELOW 760px ----------- */
+/* p1, image, p2 (stacked) */
+@media (max-width: 760px) {
+    .about-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-image-1,
+  .about-image-2 {
+    margin: 0 auto;
+  }
+
+  .about-bottom-buttons {
+    justify-content: space-between;
+  }
+
+  .cv-button {
+    width: 60%;
+  }
+
+  .about-row.left.two-rows {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+  }
+
+  .about-image-1 {
+    grid-row: 2;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .about-text-block {
+    display: contents;
+  }
+
+  .about-text-block p:first-child {
+    grid-row: 1;
+  }
+
+  .about-text-block p:last-child {
+    grid-row: 3;
+  }
+}
+
+/* ----------- BELOW 460px ----------- */
+/* same order but bigger image */
+@media (max-width: 460px) {
+  .about-image-1 {
+    max-width: 260px;
+  }
+
+  .about-image-2 {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .cv-button {
+    width: 60%;
+  }
+
+  .about-bottom-buttons {
+    justify-content: space-between;
+  }
+}

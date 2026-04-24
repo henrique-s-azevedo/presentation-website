@@ -1,24 +1,35 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./utils/ScrollToTop.jsx";
 
 import Header from "./components/Header/Header.jsx";
 
 import HomeTopPage from "./Pages/Home/HomeTopPage.jsx";
 import HomeBottomPage from "./Pages/Home/HomeBottomPage.jsx";
 
-import AboutTopPage from "./Pages/About/AboutTopPage.jsx";
-import AboutBottomPage from "./Pages/About/AboutBottomPage.jsx";
+import AboutTopPage from "./Pages/About/AboutTopPage/AboutTopPage.jsx";
+import AboutMyStoryPage from "./Pages/About/AboutBottomPage/AboutMyStory/AboutMyStory.jsx";
+import AboutMyProgrammingPathPage from "./Pages/About/AboutBottomPage/AboutMyProgrammingPath/AboutMyProgrammingPath.jsx";
+import AboutWhatAmILookingForPage from "./Pages/About/AboutBottomPage/AboutWhatAmILookingFor/AboutWhatAmILookingForPage.jsx";
 
 import ProjectsTopPage from "./Pages/Projects/ProjectsTopPage.jsx";
-import ProjectsBottomPage from "./Pages/Projects/ProjectsBottomPage.jsx";
+import PresentationWebsite from "./Pages/Projects/ProjectsBottomPage/PresentationWebsite.jsx";
+import TeamSafetyMonitor from "./Pages/Projects/ProjectsBottomPage/TeamSafetyMonitor.jsx";
+import TeamCarDealer from "./Pages/Projects/ProjectsBottomPage/TeamCarDealer.jsx";
+
 
 import ContactTopPage from "./Pages/Contact/ContactTopPage.jsx";
 
-import PathTopPage from "./Pages/Path/PathTopPage.jsx";
-import PathBottomPage from "./Pages/Path/PathBottomPage.jsx";
+import SkillsTopPage from "./Pages/Skills/SkillsTopPage/SkillsTopPage.jsx";
+import SoftSkillsPage from "./Pages/Skills/SkillsBottomPage/SoftSkills/SoftSkillsPage.jsx";
+import HardSkillsPage from "./Pages/Skills/SkillsBottomPage/HardSkills/HardSkillsPage.jsx";
 
 export default function App() {
   return (
     <BrowserRouter>
+
+      {/* Scroll to top on every route change */}
+      <ScrollToTop />
+
       <Header />
 
       <Routes>
@@ -28,19 +39,26 @@ export default function App() {
 
         {/* ABOUT */}
         <Route path="/about" element={<AboutTopPage />} />
-        <Route path="/about/content" element={<AboutBottomPage />} />
+        <Route path="/about/story" element={<AboutMyStoryPage />} />
+        <Route path="/about/programming" element={<AboutMyProgrammingPathPage />} />
+        <Route path="/about/lookingfor" element={<AboutWhatAmILookingForPage />} />
 
         {/* PROJECTS */}
         <Route path="/projects" element={<ProjectsTopPage />} />
-        <Route path="/projects/content" element={<ProjectsBottomPage />} />
+        <Route path="/projects/presentationwebsite" element={<PresentationWebsite />} />
+        <Route path="/projects/teamsafetymonitor" element={<TeamSafetyMonitor />} />
+        <Route path="/projects/teamcardealer" element={<TeamCarDealer />} />
+
 
         {/* CONTACT */}
         <Route path="/contact" element={<ContactTopPage />} />
 
-        {/* PATH */}
-        <Route path="/path" element={<PathTopPage />} />
-        <Route path="/path/content" element={<PathBottomPage />} />
+        {/* SKILLS */}
+        <Route path="/skills" element={<SkillsTopPage />} />
+        <Route path="/skills/softskills" element={<SoftSkillsPage />} />
+        <Route path="/skills/hardskills" element={<HardSkillsPage />} />
       </Routes>
+
     </BrowserRouter>
   );
 }

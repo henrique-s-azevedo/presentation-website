@@ -1,0 +1,78 @@
+/* ----------------------------- */
+/*   TEXT + IMAGE GRID LAYOUT    */
+/* ----------------------------- */
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  align-items: center;
+  gap: 24px;
+}
+
+.about-row.left {
+  grid-template-columns: 220px 1fr;
+}
+
+.about-row img {
+  width: 100%;
+  max-width: 220px;
+  opacity: 0.95;
+}
+
+/* Code For All smaller */
+.about-row.codeforall-row {
+  grid-template-columns: 160px 1fr;
+}
+
+.about-row.codeforall-row img.codeforall {
+  max-width: 160px;
+}
+
+/* Java + React side by side */
+.about-row-multi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 12px 0;
+}
+
+.about-row-multi img {
+  max-width: 140px;
+  margin: 0 auto;
+}
+
+/* Bottom navigation buttons */
+.about-bottom-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-32);
+}
+
+/* ----------------------------- */
+/*   MOBILE                      */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+  .about-row,
+  .about-row.left,
+  .about-row.codeforall-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-row img {
+    order: -1;
+    max-width: 120px;
+    margin: 0 auto;
+  }
+
+  .about-row-multi {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .about-row-multi img {
+    max-width: 100px;
+  }
+}
