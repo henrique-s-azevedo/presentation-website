@@ -10,7 +10,6 @@ import { SiPostgresql } from "react-icons/si";
 // Image
 import TeamSafetyMonitorImg from "../../../assets/images/projects/bottom-pages/team-safety-monitor/teamsafetymonitor-top-img.png";
 
-
 export default function TeamSafetyMonitor() {
   return (
     <GenericProjectsBottomPage
@@ -20,17 +19,7 @@ export default function TeamSafetyMonitor() {
       // Replace these later with real URLs if needed
       sourceCodeLink="https://github.com/your-repo"
 
-      description="
-        This project was developed as the final assignment of our bootcamp,
-        where we were given a health-related theme and tasked with building
-        a complete SPA. Our team decided to create a platform designed for
-        companies to monitor workload levels and detect early signs of burnout
-        among employees and teams. The system includes two types of users:
-        admins, who manage teams and monitor their status, and workers, who
-        simply need to answer daily questionnaires and submit their work-related
-        metrics. The goal is to help organizations identify risks early and
-        promote healthier work environments.
-      "
+      description="This project was developed as the final assignment of our bootcamp, where we were given a health-related theme and tasked with building a complete SPA. Our team decided to create a platform designed for companies to monitor workload levels and detect early signs of burnout among employees and teams. The system includes two types of users: admins, who manage teams and monitor their status, and workers, who simply need to answer daily questionnaires and submit their work-related metrics. The goal is to help organizations identify risks early and promote healthier work environments."
 
       technologies={[
         { name: 'React', icon: <FaReact /> },
@@ -39,21 +28,16 @@ export default function TeamSafetyMonitor() {
         { name: 'PostgreSQL', icon: <SiPostgresql /> }
       ]}
 
-      motivation="
-        We chose this topic because excessive workload and burnout have become
-        real and growing problems in modern workplaces. Our goal was to create
-        a tool that could help companies detect these issues early and support
-        their employees' well-being. This project allowed us to combine
-        technical development with a meaningful real-world purpose.
-      "
+      motivation="We chose this topic because excessive workload and burnout have become real and growing problems in modern workplaces. Our goal was to create a tool that could help companies detect these issues early and support their employees' well-being. This project allowed us to combine technical development with a meaningful real-world purpose."
 
       authors={[
-        "Henrique Azevedo",
-        "Cátia Vilarinho",
-        "Diogo XXX",
-        "Rui Alves",
-        "Kafir"
+        { name: "Kátia Vilarinho", github: "https://github.com/kvilarinho" },
+        { name: "Henrique Azevedo", github: "https://github.com/xHenriqueAzevedo" },
+        { name: "Diogo Santos", github: "https://github.com/AlienGamer29" },
+        { name: "Rui Soares", github: "https://github.com/AezrelX6" },
+        { name: "Vasco Medina", github: "https://github.com/medinav27" }
       ]}
+
     />
   );
 }

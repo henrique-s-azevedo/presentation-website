@@ -42,8 +42,7 @@ export default function ProjectsCarousel({ slides }) {
   };
 
   /* ============================================================
-     AUTOPLAY INTELLIGENT
-     - pauses when:
+     AUTOPLAY Pauses when:
        • cover is open
        • user hovers
        • user interacts

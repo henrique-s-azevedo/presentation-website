@@ -67,7 +67,14 @@ export default function GenericProjectsBottomPage({
             <li key={index}>
               <span className="author-name">{author.name}</span>
               {" – "}
-              <span className="author-email">{author.email}</span>
+              <a
+                href={author.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="author-github"
+              >
+                GitHub
+              </a>
             </li>
           ))}
         </ul>

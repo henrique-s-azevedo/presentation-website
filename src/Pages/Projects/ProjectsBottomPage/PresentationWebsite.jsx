@@ -41,7 +41,7 @@ export default function PresentationWebsite() {
         and my commitment. It was also the project where I truly learned React
         and started working with component-based architecture.
       "
-      authors={[{name: "Henrique Azevedo", email: "henriqueazevedo.dev@gmail.com"}]}
+      authors={[{ name: "Henrique Azevedo", github: "https://github.com/xHenriqueAzevedo" }]}
     />
   );
 }

@@ -87,19 +87,9 @@ p {
   justify-content: flex-end;
 }
 
-/* Bullet list */
-.about-list {
-  color: black;
-  margin: var(--space-8) 0 var(--space-12) 0;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.about-list li {
-  line-height: 1.5;
-  text-align: justify;
+h3 {
+  margin-top: 30px;
+  color: var(--primary-color);
 }
 
 /* ============================================

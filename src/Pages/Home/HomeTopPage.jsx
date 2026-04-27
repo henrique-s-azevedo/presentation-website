@@ -9,7 +9,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaChevronDown  } from "react-icons/fa
 export default function HomeTopPage() {
   useEffect(() => {
     const typed = new Typed(".multiple-text", {
-      strings: ["FullStack Developer", "Avid learner", "Proactive and productive worker"],
+      strings: ["Junior Developer", "Driven Professional", "Problem Solver", "Team Player"],
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1000,
@@ -31,30 +31,38 @@ export default function HomeTopPage() {
 
         <p className="motivational">
           Every day I build, learn, and push forward to become better than yesterday. 
-          See why I'm the right candidate for your job <Link to="/about" className="ternary-color">here</Link>.
+          See why I'm the right candidate for your job <Link to="/presentation" className="ternary-color bold">here</Link>.
         </p>
 
-        <div className="social-media">
-          <a href="https://github.com/teu-username" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-          </a>
+<div className="social-media">
+  <a
+    href="https://github.com/xHenriqueAzevedo"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaGithub />
+  </a>
 
-          <a href="https://www.linkedin.com/in/teu-perfil" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-          </a>
+  <a
+    href="https://www.linkedin.com/in/henrique-azevedo-9615222b3/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedin />
+  </a>
 
-          <a
-            href="https://wa.me/351XXXXXXXXX"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whatsapp-icon"
-          >
-            <FaWhatsapp />
-          </a>
-        </div>
+  <a
+    href="https://wa.me/351914522322"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="whatsapp-icon"
+  >
+    <FaWhatsapp />
+  </a>
+</div>
 
         <div className="btn-scroll-container">
-          <ScrollButton to="/home" className="scroll-down-btn">
+          <ScrollButton to="/about" className="scroll-down-btn">
             <FaChevronDown />
           </ScrollButton>
         </div>

@@ -23,6 +23,9 @@ import SkillsTopPage from "./Pages/Skills/SkillsTopPage/SkillsTopPage.jsx";
 import SoftSkillsPage from "./Pages/Skills/SkillsBottomPage/SoftSkills/SoftSkillsPage.jsx";
 import HardSkillsPage from "./Pages/Skills/SkillsBottomPage/HardSkills/HardSkillsPage.jsx";
 
+import PresentationBottomPage from "./Pages/Presentation/PresentationBottomPage.jsx";
+
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -57,6 +60,10 @@ export default function App() {
         <Route path="/skills" element={<SkillsTopPage />} />
         <Route path="/skills/softskills" element={<SoftSkillsPage />} />
         <Route path="/skills/hardskills" element={<HardSkillsPage />} />
+
+        {/* PRESENTATION */}
+        <Route path="/presentation" element={<PresentationBottomPage />} />
+
       </Routes>
 
     </BrowserRouter>

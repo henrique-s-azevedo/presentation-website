@@ -1,0 +1,143 @@
+/* ----------------------------- */
+/*   BASE SECTION LAYOUT         */
+/* ----------------------------- */
+
+.presentation-bottom-page {
+  min-height: 100vh;
+  padding: 6rem 9% 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-secondary-color);
+}
+
+.presentation-title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-32);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* ----------------------------- */
+/*   CONTENT                     */
+/* ----------------------------- */
+
+.presentation-container {
+  width: 100%;
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+}
+
+.presentation-container p {
+  color: black;
+  text-align: justify;
+  margin-bottom: 8px;
+}
+
+/* ----------------------------- */
+/*   SUBTITLES (H3)              */
+/* ----------------------------- */
+
+.presentation-subtitle {
+  font-size: var(--font-size-lg);
+  margin-top: 16px;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ----------------------------- */
+/*   ICON ROWS                   */
+/* ----------------------------- */
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 2rem;
+  color: var(--ternary-color);
+  margin-bottom: 12px;
+}
+
+/* ----------------------------- */
+/*   LISTS                       */
+/* ----------------------------- */
+
+.presentation-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.presentation-list li {
+  color: var(--primary-color);
+  margin-bottom: 6px;
+  list-style-type: disc;
+}
+
+/* ----------------------------- */
+/*   LINKS                       */
+/* ----------------------------- */
+
+.presentation-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* ----------------------------- */
+/*   CONTACT BUTTONS             */
+/* ----------------------------- */
+
+.contact-buttons {
+  margin-top: var(--space-32);
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contact-btn {
+  padding: 8px 18px;
+  border-radius: var(--space-16);
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.contact-btn:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* ----------------------------- */
+/*   MOBILE                      */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+  .presentation-bottom-page {
+    padding: 4rem 5% 2rem;
+  }
+
+  .presentation-container {
+    max-width: 100%;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-btn {
+    width: 50%;
+    text-align: center;
+  }
+}

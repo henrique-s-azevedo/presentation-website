@@ -18,15 +18,7 @@ export default function CarDealerPlatform() {
 
       sourceCodeLink="https://github.com/your-repo"
 
-      description="
-        This project is a full-stack car dealership platform currently under development.
-        It includes a complete backend and frontend architecture, featuring two types
-        of users: admins and regular users. Admins can add, edit, and remove cars from
-        the catalog, while users can browse available vehicles, save favorites,
-        subscribe to updates, and purchase cars directly through the platform.
-        The goal of this project is to practice and improve the technologies learned
-        during the bootcamp, while building a real-world, scalable application.
-      "
+      description="This project is a full-stack car dealership platform currently under development. It includes a complete backend and frontend architecture, featuring two types of users: admins and regular users. Admins can add, edit, and remove cars from the catalog, while users can browse available vehicles, save favorites, subscribe to updates, and purchase cars directly through the platform. The goal of this project is to practice and improve the technologies learned during the bootcamp, while building a real-world, scalable application."
 
       technologies={[
         { name: 'React', icon: <FaReact /> },
@@ -35,17 +27,10 @@ export default function CarDealerPlatform() {
         { name: 'PostgreSQL', icon: <SiPostgresql /> }
       ]}
 
-      motivation="
-        The purpose of this project is to deepen my understanding of full-stack
-        development by building a practical, real-world application. A car dealership
-        system provides a perfect scenario to practice CRUD operations, authentication,
-        authorization, database modeling, and API communication. It also allows me to
-        explore more advanced concepts such as state management, secure backend logic,
-        and scalable architecture.
-      "
+      motivation="The purpose of this project is to deepen my understanding of full-stack development by building a practical, real-world application. A car dealership system provides a perfect scenario to practice CRUD operations, authentication, authorization, database modeling, and API communication. It also allows me to explore more advanced concepts such as state management, secure backend logic, and scalable architecture."
 
       authors={[
-        { name: 'Henrique Azevedo', email: 'henriqueazevedo.dev@gmail.com' }
+        { name: "Henrique Azevedo", github: "https://github.com/xHenriqueAzevedo" }
       ]}
     />
   );
