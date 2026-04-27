@@ -4,7 +4,6 @@ import ScrollToTop from "./utils/ScrollToTop.jsx";
 import Header from "./components/Header/Header.jsx";
 
 import HomeTopPage from "./Pages/Home/HomeTopPage.jsx";
-import HomeBottomPage from "./Pages/Home/HomeBottomPage.jsx";
 
 import AboutTopPage from "./Pages/About/AboutTopPage/AboutTopPage.jsx";
 import AboutMyStoryPage from "./Pages/About/AboutBottomPage/AboutMyStory/AboutMyStory.jsx";
@@ -38,7 +37,6 @@ export default function App() {
       <Routes>
         {/* HOME */}
         <Route path="/" element={<HomeTopPage />} />
-        <Route path="/home" element={<HomeBottomPage />} />
 
         {/* ABOUT */}
         <Route path="/about" element={<AboutTopPage />} />
