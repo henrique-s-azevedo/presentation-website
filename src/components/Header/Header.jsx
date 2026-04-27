@@ -5,6 +5,8 @@ import NavBar from "../Navbar/NavBar.jsx";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <header className="header">
       <div className="welcome-message">
@@ -21,7 +23,7 @@ export default function Header() {
         </a>
       </div>
 
-      {/* Botão hamburguer (mobile only) */}
+      {/* Mobile Burger */}
       <button
         className={`hamburger ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
@@ -31,8 +33,8 @@ export default function Header() {
         <span></span>
       </button>
 
-      {/* Navbar colapsável */}
-      <NavBar isOpen={isOpen} />
+      {/* NavBar Closing */}
+      <NavBar isOpen={isOpen} closeMenu={closeMenu} />
     </header>
   );
 }
