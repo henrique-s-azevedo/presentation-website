@@ -27,7 +27,7 @@ import PresentationBottomPage from "./Pages/Presentation/PresentationBottomPage.
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
 
       {/* Scroll to top on every route change */}
       <ScrollToTop />
@@ -64,6 +64,6 @@ export default function App() {
 
       </Routes>
 
-    </BrowserRouter>
+    </>
   );
 }

@@ -15,8 +15,8 @@ export default function Header() {
         </h1>
 
         <a
-          href="/assets/cv/Henrique-CV.pdf"
-          download="Henrique-CV.pdf"
+          href="/assets/cv/Henrique Azevedo - dev curriculum.pdf"
+          download="Henrique-Azevedo-dev-curriculum.pdf"
           className="resume-download"
         >
           Download CV
