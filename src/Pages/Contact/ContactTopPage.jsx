@@ -100,12 +100,6 @@ const handleSubmit = (e) => {
               <FaLinkedin />
             </MediaButton>
 
-            <MediaButton
-              href="https://calendar.google.com/"
-              ariaLabel="Google Calendar"
-            >
-              <SiGooglecalendar />
-            </MediaButton>
           </div>
 
           <p className="bigger-p">Thank you!</p>
