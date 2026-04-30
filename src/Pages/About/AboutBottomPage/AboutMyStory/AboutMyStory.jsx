@@ -42,7 +42,12 @@ export default function AboutMyStory() {
       <p>If you are interested in checking all my fitness backgroung, <span className="bold">you download my CV below:</span></p>
 
       <div className="cv-button-wrapper">
-        <a href="/assets/cv/Henrique-Azevedo-Fitness-CV.pdf" download="Henrique-Azevedo-Fitness-CV.pdf" className="resume-download cv-button">Download Fitness CV</a>
+        <a  
+        href={`${import.meta.env.BASE_URL}assets/cv/Henrique-Azevedo-Fitness-CV.pdf`}
+        download="Henrique-Azevedo-Fitness-CV.pdf" 
+        className="resume-download cv-button">
+          Download Fitness CV
+          </a>
       </div>
 
     <p>

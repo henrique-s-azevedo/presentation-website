@@ -97,7 +97,6 @@ h3 {
 =============================================== */
 
 /* ----------- BELOW 760px ----------- */
-/* p1, image, p2 (stacked) */
 @media (max-width: 760px) {
     .about-row {
     grid-template-columns: 1fr;

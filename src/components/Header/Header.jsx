@@ -15,7 +15,7 @@ export default function Header() {
         </h1>
 
         <a
-          href="/assets/cv/Henrique Azevedo - dev curriculum.pdf"
+          href={`${import.meta.env.BASE_URL}assets/cv/Henrique-Azevedo-dev-curriculum.pdf`}
           download="Henrique-Azevedo-dev-curriculum.pdf"
           className="resume-download"
         >
