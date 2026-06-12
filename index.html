@@ -4,10 +4,24 @@
     <link rel="icon" href="/presentation-website/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Henrique Azevedo - Software Developer</title>
-    <script type="module" crossorigin src="/presentation-website/assets/index-mSvLT6o1.js"></script>
-    <link rel="stylesheet" crossorigin href="/presentation-website/assets/index-B9f4eKK8.css">
+    <script type="module" crossorigin src="/presentation-website/assets/index-vTsQDpFJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/presentation-website/assets/index-DAp4MD8g.css">
   </head>
   <body>
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded[0] +
+            (decoded[1] ? '?' + decoded[1] : '') +
+            l.hash
+          );
+        }
+      }(window.location));
+    </script>
     <div id="root"></div>
   </body>
 </html>
